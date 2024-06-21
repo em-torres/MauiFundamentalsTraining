@@ -1,4 +1,6 @@
-﻿namespace TrainingMauiFundamentals;
+﻿using System.Diagnostics;
+
+namespace TrainingMauiFundamentals;
 
 public partial class App : Application
 {
@@ -7,5 +9,10 @@ public partial class App : Application
 		InitializeComponent();
 
 		MainPage = new AppShell();
+	}
+	
+	protected override void OnStart()
+	{
+		Debug.WriteLine("OnStart called", "PSDEMO");
 	}
 }
